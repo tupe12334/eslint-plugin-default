@@ -2,11 +2,12 @@ const noLocalhostRule = require('./rules/no-localhost');
 const noHardcodedUrlsRule = require('./rules/no-hardcoded-urls');
 const requireParamDefaultsRule = require('./rules/require-param-defaults');
 const noDefaultParamsRule = require('./rules/no-default-params');
+const packageJson = require('../package.json');
 
 const plugin = {
   meta: {
-    name: 'eslint-plugin-default',
-    version: '1.0.0'
+    name: packageJson.name,
+    version: packageJson.version
   },
   rules: {
     'no-localhost': noLocalhostRule,

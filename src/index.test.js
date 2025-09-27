@@ -1,11 +1,12 @@
 // globals: describe, it, expect
 const plugin = require('./index');
+const packageJson = require('../package.json');
 
 describe('eslint-plugin-default', () => {
   it('should export plugin metadata', () => {
     expect(plugin.meta).toBeDefined();
-    expect(plugin.meta.name).toBe('eslint-plugin-default');
-    expect(plugin.meta.version).toBe('1.0.0');
+    expect(plugin.meta.name).toBe(packageJson.name);
+    expect(plugin.meta.version).toBe(packageJson.version);
   });
 
   it('should export all rules', () => {
