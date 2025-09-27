@@ -13,7 +13,7 @@ describe('eslint-plugin-default', () => {
     expect(plugin.rules['no-localhost']).toBeDefined();
     expect(plugin.rules['no-hardcoded-urls']).toBeDefined();
     expect(plugin.rules['require-param-defaults']).toBeDefined();
-    expect(plugin.rules['no-param-defaults']).toBeDefined();
+    expect(plugin.rules['no-default-params']).toBeDefined();
   });
 
   it('should export recommended config', () => {
@@ -23,7 +23,7 @@ describe('eslint-plugin-default', () => {
     expect(plugin.configs.recommended.rules).toBeDefined();
     expect(plugin.configs.recommended.rules['default/no-localhost']).toBe('error');
     expect(plugin.configs.recommended.rules['default/no-hardcoded-urls']).toBe('error');
-    expect(plugin.configs.recommended.rules['default/no-param-defaults']).toBe('error');
+    expect(plugin.configs.recommended.rules['default/no-default-params']).toBe('error');
   });
 
   it('should export strict config', () => {
@@ -33,7 +33,7 @@ describe('eslint-plugin-default', () => {
     expect(plugin.configs.strict.rules).toBeDefined();
     expect(plugin.configs.strict.rules['default/no-localhost']).toBe('error');
     expect(plugin.configs.strict.rules['default/no-hardcoded-urls']).toBe('error');
-    expect(plugin.configs.strict.rules['default/no-param-defaults']).toBe('error');
+    expect(plugin.configs.strict.rules['default/no-default-params']).toBe('error');
   });
 
   it('should have valid rule implementations', () => {

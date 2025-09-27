@@ -1,6 +1,6 @@
-# no-param-defaults
+# no-default-params
 
-Disallow default values in function parameters to enforce explicit handling and improve code clarity.
+Disallow default parameters to enforce explicit default value handling and improve code clarity.
 
 ## Why This Rule?
 
@@ -74,7 +74,7 @@ function calculate(a, b) {
 
 ```javascript
 {
-  "default/no-param-defaults": ["error", {
+  "default/no-default-params": ["error", {
     "allowInArrowFunctions": false,     // Allow defaults in arrow functions (default: false)
     "allowInMethods": false,            // Allow defaults in object/class methods (default: false)
     "allowInConstructors": false,       // Allow defaults in class constructors (default: false)

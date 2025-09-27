@@ -9,9 +9,9 @@ const ruleTester = new RuleTester({
   }
 });
 
-describe('no-param-defaults', () => {
-  it('should disallow default values in function parameters', () => {
-    ruleTester.run('no-param-defaults', rule, {
+describe('no-default-params', () => {
+  it('should disallow default parameters', () => {
+    ruleTester.run('no-default-params', rule, {
       valid: [
         // Functions without defaults
         'function greet(name) { return `Hello ${name || "Guest"}`; }',
