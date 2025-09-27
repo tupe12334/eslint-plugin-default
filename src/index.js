@@ -1,6 +1,7 @@
 const noLocalhostRule = require('./rules/no-localhost');
 const noHardcodedUrlsRule = require('./rules/no-hardcoded-urls');
 const requireParamDefaultsRule = require('./rules/require-param-defaults');
+const noParamDefaultsRule = require('./rules/no-param-defaults');
 
 const plugin = {
   meta: {
@@ -10,7 +11,8 @@ const plugin = {
   rules: {
     'no-localhost': noLocalhostRule,
     'no-hardcoded-urls': noHardcodedUrlsRule,
-    'require-param-defaults': requireParamDefaultsRule
+    'require-param-defaults': requireParamDefaultsRule,
+    'no-param-defaults': noParamDefaultsRule
   }
 };
 
@@ -22,7 +24,8 @@ plugin.configs = {
     },
     rules: {
       'default/no-localhost': 'error',
-      'default/no-hardcoded-urls': 'error'
+      'default/no-hardcoded-urls': 'error',
+      'default/no-param-defaults': 'error'
     }
   },
   strict: {
@@ -31,7 +34,8 @@ plugin.configs = {
     },
     rules: {
       'default/no-localhost': 'error',
-      'default/no-hardcoded-urls': 'error'
+      'default/no-hardcoded-urls': 'error',
+      'default/no-param-defaults': 'error'
     }
   }
 };
