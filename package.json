@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-default",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "ESLint plugin that enforces proper defaults by disallowing hardcoded values in the codebase",
   "main": "src/index.js",
   "exports": {
