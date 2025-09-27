@@ -1,0 +1,63 @@
+{
+  "name": "eslint-plugin-default",
+  "version": "1.0.0",
+  "description": "ESLint plugin that enforces proper defaults by disallowing hardcoded values in the codebase",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src/**/*.js",
+    "!src/**/*.test.js"
+  ],
+  "scripts": {
+    "test": "vitest --run",
+    "test:coverage": "vitest --coverage",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "release": "release-it"
+  },
+  "keywords": [
+    "eslint",
+    "plugin",
+    "defaults",
+    "hardcoded",
+    "configuration",
+    "constants",
+    "urls",
+    "localhost",
+    "maintainability",
+    "best-practices",
+    "code-quality"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tupe12334/eslint-plugin-default.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tupe12334/eslint-plugin-default/issues"
+  },
+  "homepage": "https://github.com/tupe12334/eslint-plugin-default#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "peerDependencies": {
+    "eslint": "^9.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.11.1",
+    "@release-it/conventional-changelog": "^8.0.1",
+    "@vitest/coverage-v8": "^2.1.1",
+    "eslint": "^9.11.1",
+    "eslint-config-agent": "^1.3.7",
+    "eslint-plugin-required-exports": "^0.2.0",
+    "eslint-plugin-single-export": "^1.1.2",
+    "globals": "^16.3.0",
+    "release-it": "^17.6.0",
+    "vitest": "^2.1.1"
+  },
+  "packageManager": "pnpm@9.10.0"
+}
