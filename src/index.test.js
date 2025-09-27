@@ -12,6 +12,7 @@ describe('eslint-plugin-default', () => {
     expect(plugin.rules).toBeDefined();
     expect(plugin.rules['no-localhost']).toBeDefined();
     expect(plugin.rules['no-hardcoded-urls']).toBeDefined();
+    expect(plugin.rules['require-param-defaults']).toBeDefined();
   });
 
   it('should export recommended config', () => {

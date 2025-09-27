@@ -1,5 +1,6 @@
 const noLocalhostRule = require('./rules/no-localhost');
 const noHardcodedUrlsRule = require('./rules/no-hardcoded-urls');
+const requireParamDefaultsRule = require('./rules/require-param-defaults');
 
 const plugin = {
   meta: {
@@ -8,7 +9,8 @@ const plugin = {
   },
   rules: {
     'no-localhost': noLocalhostRule,
-    'no-hardcoded-urls': noHardcodedUrlsRule
+    'no-hardcoded-urls': noHardcodedUrlsRule,
+    'require-param-defaults': requireParamDefaultsRule
   }
 };
 

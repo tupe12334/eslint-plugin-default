@@ -67,6 +67,7 @@ export default [
 
 - [`no-localhost`](src/rules/no-localhost/README.md) - Disallow hardcoded "localhost" usage to encourage configurable defaults
 - [`no-hardcoded-urls`](src/rules/no-hardcoded-urls/README.md) - Disallow any hardcoded URLs to enforce proper configuration abstraction
+- [`require-param-defaults`](src/rules/require-param-defaults/README.md) - Enforce default values for function parameters to prevent runtime errors
 
 ## Why These Rules?
 
