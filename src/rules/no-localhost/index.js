@@ -35,7 +35,7 @@ module.exports = {
     const allowInTests = options.allowInTests || false;
     const allowInComments = options.allowInComments !== false;
 
-    const filename = context.getFilename();
+    const filename = (context.filename || context.getFilename());
     const isTestFile =
       /\.(test|spec)\.(js|ts|jsx|tsx)$/.test(filename) ||
       /(__tests__|test|spec)\//.test(filename);
@@ -105,7 +105,7 @@ module.exports = {
       // Handle comments if allowInComments is false
       Program() {
         if (!allowInComments) {
-          const sourceCode = context.getSourceCode();
+          const sourceCode = (context.sourceCode || context.getSourceCode());
           const comments = sourceCode.getAllComments();
 
           comments.forEach((comment) => {
