@@ -182,6 +182,10 @@ pnpm lint:fix
 pnpm release
 ```
 
+## Related projects
+
+- [moadim](https://moadim.io/) - loop engineering: build, schedule and run agent loops.
+
 ## License
 
 MIT
