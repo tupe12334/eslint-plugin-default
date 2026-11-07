@@ -1,0 +1,32 @@
+name: linecheck
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  linecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install linecheck (pinned release binary)
+        env:
+          TAG: v1.2.2
+          TARGET: x86_64-unknown-linux-gnu
+        run: |
+          ARCHIVE="linecheck-$TAG-$TARGET.tar.gz"
+          BASE="https://github.com/tupe12334/linecheck/releases/download/$TAG/$ARCHIVE"
+          curl -fsSLO "$BASE"
+          curl -fsSLO "$BASE.sha256"
+          sha256sum -c "$ARCHIVE.sha256"
+          tar xzf "$ARCHIVE"
+          sudo install "linecheck-$TAG-$TARGET/linecheck" /usr/local/bin/
+
+      - name: Run linecheck
+        run: linecheck .
